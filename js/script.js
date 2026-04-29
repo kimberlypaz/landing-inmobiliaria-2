@@ -594,9 +594,27 @@
     });
 
     function showSuccess() {
-      form.hidden    = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var modal   = document.getElementById('successModal');
+      var closeX  = document.getElementById('successClose');
+      var closeBtn = document.getElementById('successCloseBtn');
+      var backdrop = document.getElementById('successBackdrop');
+
+      if (!modal) return;
+
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      closeX.addEventListener('click', closeModal);
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function onKey(e) {
+        if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', onKey); }
+      });
     }
   })();
 

@@ -3699,6 +3699,110 @@ a.footer__contact-value:hover { color: var(--verde); }
   transform: translate(-50%, -50%);
 }
 
+/* ============================================================
+   MODAL ÉXITO FORMULARIO
+   ============================================================ */
+.success-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.success-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.success-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 60, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.success-modal__box {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+.success-modal.is-open .success-modal__box {
+  transform: translateY(0) scale(1);
+}
+.success-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.success-modal__close:hover { background: #e2e8f0; color: #0f172a; }
+.success-modal__icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4bc24c, #3aaa3b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(75,194,76,0.35);
+}
+.success-modal__title {
+  font-family: var(--font);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+.success-modal__text {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+}
+.success-modal__text strong { color: #0f172a; }
+.success-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.5rem;
+  background: var(--azul);
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  width: 100%;
+}
+.success-modal__btn:hover { background: var(--azul-oscuro); transform: translateY(-1px); }
+
 /* Overlay de fondo */
 .lb-overlay {
   position: fixed;
