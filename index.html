@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Departamentos modernos en las mejores ubicaciones del Perú. Encuentra tu hogar ideal con Ambital Inmobiliaria." />
+  <title>Ambital | Departamentos en Perú</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Favicon: colocar el isotipo en images/favicon.png -->
+  <link rel="icon" type="image/png" href="assets/images/logos/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/logos/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="mainHeader">
+    <nav class="nav">
+
+      <!-- Logo: colocar en images/logo.png (PNG con fondo transparente) -->
+      <a href="#inicio" class="nav__logo" aria-label="Ambital Inmobiliaria – Inicio">
+        <img src="assets/images/logos/logo.png" alt="Ambital Inmobiliaria" class="nav__logo-img" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__menu-close-wrap">
+          <button class="nav__menu-close" id="navClose" aria-label="Cerrar menú">✕</button>
+        </li>
+        <li class="nav__item--inicio"><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li class="nav__item--servicios"><a href="#reels" class="nav__link">Servicios</a></li>
+        <li class="nav__item--proyectos"><a href="#casos" class="nav__link">Proyectos</a></li>
+
+        <!-- Dropdown Más (solo desktop) -->
+        <li class="nav__item--mas nav__dropdown nav__dropdown--desktop">
+          <button class="nav__link nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            Más
+            <svg class="nav__dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="#nosotros" class="nav__dropdown-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Nosotros
+            </a></li>
+            <li><a href="#aliados" class="nav__dropdown-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0"/></svg>
+              Aliados
+            </a></li>
+          </ul>
+        </li>
+
+        <!-- Links sueltos solo en mobile -->
+        <li class="nav__item--nosotros nav__mobile-only"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+        <li class="nav__item--aliados nav__mobile-only"><a href="#aliados" class="nav__link">Aliados</a></li>
+
+        <li class="nav__item--cta"><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO + SLIDER ========== -->
+    <section class="hero" id="inicio">
+
+      <!-- Videos de fondo -->
+      <div class="hero__slides" id="heroSlides" aria-hidden="true">
+        <div class="hero__slide hero__slide--active" style="background-image:url('assets/images/hero/hero-slide-1.jpg')">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/images/hero/hero-slide-1.jpg">
+            <source src="assets/videos/hero/hero-video-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero__slide" style="background-image:url('assets/images/hero/hero-slide-2.jpg')">
+          <video muted loop playsinline preload="auto" poster="assets/images/hero/hero-slide-2.jpg">
+            <source src="assets/videos/hero/hero-video-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero__slide" style="background-image:url('assets/images/hero/hero-slide-3.jpg')">
+          <video muted loop playsinline preload="auto" poster="assets/images/hero/hero-slide-3.jpg">
+            <source src="assets/videos/hero/hero-video-3.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- Overlay oscuro sobre el video -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__overlay-bottom" aria-hidden="true"></div>
+
+      <!-- Flechas slider -->
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Video anterior">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Video siguiente">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Contenido centrado -->
+      <div class="hero__content container">
+        <div class="hero__text">
+          <h1 class="hero__title">Aceleramos la <em class="hero__em--azul">venta</em><br />de tu <em>proyecto</em>.</h1>
+          <p class="hero__subtitle">
+            Te ayudamos a conseguir ese +1 o +2 que necesitas.
+          </p>
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--hero">
+              Agenda una reunión
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <span class="hero__accent" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Dots indicadores -->
+      <div class="hero__dots" id="heroDots" role="tablist" aria-label="Slides"></div>
+
+    </section>
+
+    <!-- ========== ESTADÍSTICAS ========== -->
+    <div class="hero__metrics">
+      <div class="container">
+        <div class="hero__metrics-grid">
+
+          <div class="hero__metric-item">
+            <strong class="hero__metric-num" data-count="12000" data-prefix="+">+12,000</strong>
+            <span class="hero__metric-label">Leads calificados</span>
+          </div>
+
+          <div class="hero__metric-sep" aria-hidden="true"></div>
+
+          <div class="hero__metric-item">
+            <strong class="hero__metric-num" data-count="80" data-prefix="+">+80</strong>
+            <span class="hero__metric-label">Unidades vendidas</span>
+          </div>
+
+          <div class="hero__metric-sep" aria-hidden="true"></div>
+
+          <div class="hero__metric-item">
+            <strong class="hero__metric-num hero__metric-num--green" data-count="15" data-prefix="+">+15</strong>
+            <span class="hero__metric-label">Proyectos beneficiados</span>
+          </div>
+
+          <div class="hero__metric-sep" aria-hidden="true"></div>
+
+          <div class="hero__metric-item">
+            <strong class="hero__metric-num" data-count="8" data-prefix="+">+8</strong>
+            <span class="hero__metric-label">Años de experiencia</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== QUIÉNES SOMOS ========== -->
+    <section class="section nosotros" id="nosotros">
+      <div class="container">
+
+        <!-- ② Bloque principal: imagen + contenido -->
+        <div class="nosotros__block">
+
+          <!-- Columna imagen -->
+          <div class="nosotros__img-col reveal reveal--left">
+            <div class="nosotros__img-frame">
+              <img src="assets/images/about/nosotros.jpg" alt="Equipo Ambital" class="nosotros__single-img">
+              <div class="nosotros__img-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Columna contenido -->
+          <div class="nosotros__content">
+
+            <p class="section__tag nosotros__section-tag reveal reveal--up">
+              <span class="nosotros__trust-dot"></span>
+              Nosotros
+            </p>
+
+            <h3 class="nosotros__subtitle reveal reveal--up reveal--d1" style="text-align:center;">
+              Ni empresa de marketing, ni agente inmobiliario, somos un aliado <em style="font-style:normal;color:var(--verde);">comercial</em>
+            </h3>
+
+            <p class="nosotros__desc reveal reveal--up reveal--d2" style="text-align:center;">
+              Evaluamos tu proyecto y proponemos un plan de acción que traerá resultados garantizados
+            </p>
+
+            <!-- Grid 2×2 de ventajas -->
+            <div class="nosotros__pillars reveal reveal--up reveal--d3">
+
+              <div class="nosotros__pillar">
+                <strong class="nosotros__pillar-title">Pago por éxito</strong>
+                <span class="nosotros__pillar-text">Cobramos únicamente cuando la operación se concreta.</span>
+              </div>
+
+              <div class="nosotros__pillar">
+                <strong class="nosotros__pillar-title">100% Especializados</strong>
+                <span class="nosotros__pillar-text">Trabajamos únicamente con desarrollos inmobiliarios, en todas sus etapas.</span>
+              </div>
+
+              <div class="nosotros__pillar">
+                <strong class="nosotros__pillar-title">Experiencia y profesionalismo</strong>
+                <span class="nosotros__pillar-text">Nos encargamos de la gestión de los clientes desde el primer mensaje hasta la firma de escritura.</span>
+              </div>
+
+              <div class="nosotros__pillar">
+                <strong class="nosotros__pillar-title">Innovación en Marketing</strong>
+                <span class="nosotros__pillar-text">Conoce las formas más modernas de trabajar anuncios.</span>
+              </div>
+
+            </div><!-- /nosotros__pillars -->
+
+
+          </div><!-- /nosotros__content -->
+
+        </div><!-- /nosotros__block -->
+
+      </div>
+    </section>
+
+    <!-- ========== POR QUÉ ELEGIRNOS ========== -->
+    <section class="section reels-sec" id="reels">
+      <div class="container">
+
+        <div class="reels__grid">
+
+          <!-- ── Columna izquierda: embudo de conversión ── -->
+          <div class="reels__content reveal reveal--left" style="order:1;">
+
+            <div class="reels__header">
+              <p class="section__tag reels__tag reveal reveal--up">Método de trabajo</p>
+              <h2 class="reels__title reveal reveal--up reveal--d1">Del contenido al <em>cierre</em></h2>
+              <p class="reels__header-sub reveal reveal--up reveal--d2">Cada pieza de contenido cumple un rol dentro de tu embudo de ventas.</p>
+            </div>
+
+            <!-- Embudo visual -->
+            <div class="funnel__visual">
+
+              <div class="funnel__step reveal reveal--d1">
+                <div class="funnel__step-aside">
+                  <div class="funnel__step-dot">01</div>
+                  <div class="funnel__step-line"></div>
+                </div>
+                <div class="funnel__step-card">
+                  <div class="funnel__step-top">
+                    <h3 class="funnel__step-name">Atracción</h3>
+                    <span class="funnel__step-stat">+500K views</span>
+                  </div>
+                  <p class="funnel__step-desc">Anuncios en redes sociales y web diseñados milimétricamente para atraer clientes calificados.</p>
+                </div>
+              </div>
+
+              <div class="funnel__step reveal reveal--d2">
+                <div class="funnel__step-aside">
+                  <div class="funnel__step-dot">02</div>
+                  <div class="funnel__step-line"></div>
+                </div>
+                <div class="funnel__step-card">
+                  <div class="funnel__step-top">
+                    <h3 class="funnel__step-name">Interacción</h3>
+                    <span class="funnel__step-stat">+300 consultas</span>
+                  </div>
+                  <p class="funnel__step-desc">CRM, integraciones e inteligencia artificial implementada para responder de forma rápida y personalizada.</p>
+                </div>
+              </div>
+
+              <div class="funnel__step reveal reveal--d3">
+                <div class="funnel__step-aside">
+                  <div class="funnel__step-dot">03</div>
+                  <div class="funnel__step-line"></div>
+                </div>
+                <div class="funnel__step-card">
+                  <div class="funnel__step-top">
+                    <h3 class="funnel__step-name">Calificación</h3>
+                    <span class="funnel__step-stat">+120 leads</span>
+                  </div>
+                  <p class="funnel__step-desc">Asesores con experiencia en el rubro, contacto con sectoristas de todos los bancos importantes.</p>
+                </div>
+              </div>
+
+              <div class="funnel__step funnel__step--close reveal reveal--d4">
+                <div class="funnel__step-aside">
+                  <div class="funnel__step-dot funnel__step-dot--close">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                </div>
+                <div class="funnel__step-card funnel__step-card--close">
+                  <div class="funnel__step-top">
+                    <h3 class="funnel__step-name">Cierre</h3>
+                    <span class="funnel__step-stat funnel__step-stat--close">Vendido en 4 sem.</span>
+                  </div>
+                  <p class="funnel__step-desc">Firma de minuta y seguimiento durante el desembolso hasta la escritura pública.</p>
+                </div>
+              </div>
+
+            </div><!-- /funnel__visual -->
+
+          </div><!-- /reels__content -->
+
+          <!-- ── Columna derecha: reels con etiquetas de embudo ── -->
+          <div class="reels__collage reveal reveal--right" style="order:2;">
+
+            <div class="reels__glow"></div>
+
+            <!-- Wrapper carousel mobile -->
+            <div class="reels__mobile-wrapper">
+              <button class="reels__mobile-arrow reels__mobile-arrow--prev" id="reelsPrev" aria-label="Video anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+
+              <div class="reels__frame" id="reelsFrame">
+
+              <!-- Reel principal — Atracción + Interacción -->
+              <div class="reel-card reel-card--main">
+                <div class="reel-card__media">
+                  <video src="assets/videos/projects/reel1.mp4" loop playsinline muted style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+                  <div class="reel-card__overlay"></div>
+                  <button class="reel-card__play" aria-label="Reproducir video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                  <div class="reel-card__label">
+                    <strong>Proyecto Miraflores</strong>
+                    <span>Caso real · Vendido en 4 semanas</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reel secundario — Calificación -->
+              <div class="reel-card reel-card--secondary">
+                <div class="reel-card__media">
+                  <video src="assets/videos/projects/reel2.mp4" loop playsinline muted style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+                  <div class="reel-card__overlay"></div>
+                  <button class="reel-card__play reel-card__play--sm" aria-label="Reproducir video">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </button>
+                  <div class="reel-card__label">
+                    <strong>San Isidro</strong>
+                    <span>+220 leads en 30 días</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Badge flotante: leads -->
+              <div class="reels__badge reels__badge--1">
+                <div class="reels__badge-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                </div>
+                <div>
+                  <strong>+300</strong>
+                  <span>Leads generados</span>
+                </div>
+              </div>
+
+              <!-- Badge flotante: cierre -->
+              <div class="reels__badge reels__badge--2">
+                <div class="reels__badge-icon reels__badge-icon--green">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <strong>95%</strong>
+                  <span>Satisfacción</span>
+                </div>
+              </div>
+
+            </div><!-- /reels__frame -->
+
+              <button class="reels__mobile-arrow reels__mobile-arrow--next" id="reelsNext" aria-label="Video siguiente">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div><!-- /reels__mobile-wrapper -->
+
+          </div><!-- /reels__collage -->
+
+        </div><!-- /reels__grid -->
+      </div>
+    </section>
+
+    <!-- ========== CASOS DE ÉXITO ========== -->
+    <section class="section casos" id="casos">
+      <div class="container">
+
+        <div class="casos__header reveal">
+          <p class="section__tag"><span class="section__tag-dot"></span>Casos de éxito</p>
+          <h2 class="casos__title">Resultados que <em style="font-style:normal;color:var(--verde);">hablan</em> por sí solos</h2>
+        </div>
+
+        <div class="casos__grid">
+
+          <!-- ── Card 1 ── -->
+          <article class="caso-card reveal" data-lightbox
+            data-img="images/proyecto4.jpg"
+            data-badge="+2 al mes"
+            data-badge-class="caso-card__badge--vendido"
+            data-location="Magdalena"
+            data-title="Torre Magno"
+            data-quote="&quot;Un ritmo de ventas actual de +2 al mes.&quot;"
+            data-person="Klements Inmobiliaria"
+            data-role=""
+            data-m1="+2" data-m1l="Ventas al mes"
+            data-m2="" data-m2l=""
+            data-m3="" data-m3l=""
+          >
+            <div class="caso-card__top">
+              <img src="assets/images/projects/proyecto4.jpg" alt="Torre Magno" class="caso-card__img">
+              <div class="caso-card__overlay"></div>
+              <span class="caso-card__badge caso-card__badge--vendido">+2 al mes</span>
+            </div>
+            <div class="caso-card__bottom">
+              <p class="caso-card__location">
+                <svg width="10" height="10" viewBox="0 0 8 8" fill="var(--verde)" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+                Magdalena
+              </p>
+              <h3 class="caso-card__title">Torre Magno</h3>
+              <blockquote class="caso-card__quote">
+                Un ritmo de ventas actual de +2 al mes.
+              </blockquote>
+              <div class="caso-card__person">
+                <div class="caso-card__avatar">KI</div>
+                <div class="caso-card__person-info">
+                  <strong>Klements Inmobiliaria</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 2 — destacada ── -->
+          <article class="caso-card caso-card--featured reveal reveal--d1" data-lightbox
+            data-img="images/proyecto5.jpg"
+            data-badge="+2 al mes"
+            data-badge-class="caso-card__badge--preventa"
+            data-location="Jesús María"
+            data-title="Central Life"
+            data-quote="&quot;+2 al mes durante toda la etapa de construcción.&quot;"
+            data-person="Varsovia Inmobiliaria"
+            data-role=""
+            data-m1="+2" data-m1l="Ventas al mes"
+            data-m2="" data-m2l=""
+            data-m3="" data-m3l=""
+          >
+            <div class="caso-card__top">
+              <img src="assets/images/projects/proyecto5.jpg" alt="Central Life" class="caso-card__img">
+              <div class="caso-card__overlay"></div>
+              <span class="caso-card__badge caso-card__badge--preventa">+2 al mes</span>
+            </div>
+            <div class="caso-card__bottom">
+              <p class="caso-card__location">
+                <svg width="10" height="10" viewBox="0 0 8 8" fill="var(--azul)" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+                Jesús María
+              </p>
+              <h3 class="caso-card__title">Central Life</h3>
+              <blockquote class="caso-card__quote">
+                +2 al mes durante toda la etapa de construcción.
+              </blockquote>
+              <div class="caso-card__person">
+                <div class="caso-card__avatar caso-card__avatar--azul">VI</div>
+                <div class="caso-card__person-info">
+                  <strong>Varsovia Inmobiliaria</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 3 ── -->
+          <article class="caso-card reveal reveal--d2" data-lightbox
+            data-img="images/proyecto1.jpg"
+            data-badge="+1 venta"
+            data-badge-class="caso-card__badge--nuevo"
+            data-location="Lima"
+            data-title="Juan de Rada"
+            data-quote="&quot;+1 venta en un proyecto de 10 departamentos.&quot;"
+            data-person="Fampar Inmobiliaria"
+            data-role=""
+            data-m1="+1" data-m1l="Venta concretada"
+            data-m2="10" data-m2l="Departamentos"
+            data-m3="" data-m3l=""
+          >
+            <div class="caso-card__top">
+              <img src="assets/images/projects/proyecto1.jpg" alt="Juan de Rada" class="caso-card__img">
+              <div class="caso-card__overlay"></div>
+              <span class="caso-card__badge caso-card__badge--nuevo">+1 venta</span>
+            </div>
+            <div class="caso-card__bottom">
+              <p class="caso-card__location">
+                <svg width="10" height="10" viewBox="0 0 8 8" fill="#f59e0b" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+                Lima
+              </p>
+              <h3 class="caso-card__title">Juan de Rada</h3>
+              <blockquote class="caso-card__quote">
+                +1 venta en un proyecto de 10 departamentos.
+              </blockquote>
+              <div class="caso-card__person">
+                <div class="caso-card__avatar caso-card__avatar--gold">FI</div>
+                <div class="caso-card__person-info">
+                  <strong>Fampar Inmobiliaria</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /casos__grid -->
+
+        <!-- CTA final -->
+        <div class="casos__cta reveal">
+          <a href="#contacto" class="btn btn--primary">
+            Quiero resultados similares
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- ========== CLIENTES / ALIADOS (MARQUEE) ========== -->
+    <!-- Logos: reemplaza el texto por <img> con el logo real de cada entidad -->
+    <!-- ========== ALIADOS ESTRATÉGICOS ========== -->
+    <section class="aliados" id="aliados" aria-label="Aliados estratégicos de Ambital">
+      <div class="container">
+        <div class="aliados__header reveal">
+          <p class="section__tag"><span class="section__tag-dot"></span>Aliados estratégicos</p>
+          <h2 class="aliados__title">Empresas que <em>confiaron</em> en nosotros para <em>vender</em></h2>
+          <p class="aliados__desc">No trabajamos con todos los proyectos, solo donde sabemos que habrán buenos resultados.</p>
+        </div>
+      </div>
+
+      <!-- Grid estático 4×2 -->
+      <div class="container">
+        <div class="aliados__grid">
+          <div class="aliados__card"><img src="assets/images/logos/cono.jpg" alt="Cono" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/jopesa.jpg" alt="Jopesa" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/capital.jpg" alt="Capital" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/reman.jpg" alt="Reman" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/greenview.jpg" alt="Greenview" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/fampar.jpg" alt="Fampar" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/klements.jpg" alt="Klements" class="aliados__logo"></div>
+          <div class="aliados__card"><img src="assets/images/logos/varsovia.jpg" alt="Varsovia" class="aliados__logo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="contacto" id="contacto">
+
+      <div class="contacto__inner">
+
+        <!-- Columna izquierda: formulario -->
+        <div class="contacto__form-col">
+
+          <!-- Encabezado -->
+          <div class="contacto__head reveal">
+            <h2 class="contacto__title">Te contactamos en menos de 24 horas</h2>
+          </div>
+
+          <!-- Formulario -->
+          <form class="contacto__form" id="contactForm" novalidate>
+            <div class="contacto__fields">
+              <input type="text"  id="nombre"   name="nombre"   class="contacto__input" placeholder="Tu nombre" required />
+              <input type="tel"   id="telefono" name="telefono" class="contacto__input" placeholder="WhatsApp" required />
+              <input type="email" id="email"    name="email"    class="contacto__input" placeholder="Correo electrónico" />
+              <div class="contacto__select-wrap">
+                <select id="tipo_cliente" name="tipo_cliente" class="contacto__input contacto__select">
+                  <option value="" disabled selected>Tipo de cliente</option>
+                  <option value="0-20">0 – 20 dptos.</option>
+                  <option value="20-40">20 – 40 dptos.</option>
+                  <option value="40-70">40 – 70 dptos.</option>
+                  <option value="70+">+70 dptos.</option>
+                </select>
+                <svg class="contacto__select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <textarea id="como_ayudar" name="como_ayudar" class="contacto__input contacto__textarea" placeholder="¿Cómo piensas que te podemos ayudar?" rows="3"></textarea>
+            </div>
+            <button type="submit" class="contacto__submit">
+              Agenda tu reunión
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="contacto__privacy">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              Tus datos están seguros · <a href="#">Privacidad</a>
+            </p>
+          </form>
+
+          <!-- Éxito -->
+          <div class="form__success" id="formSuccess" hidden>
+            <div class="form__success-icon">✅</div>
+            <h3>¡Listo! Recibimos tu mensaje</h3>
+            <p>Un especialista Ambital te contactará en menos de 24 horas hábiles.</p>
+          </div>
+
+        </div><!-- /contacto__form-col -->
+
+        <!-- Columna derecha: imagen -->
+        <div class="contacto__img-col">
+          <img src="assets/images/contact/contacto-img.jpg" alt="Ambital Inmobiliaria" class="contacto__img" />
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+
+    <!-- Acento superior -->
+    <div class="footer__accent"></div>
+
+    <!-- Fila principal: logo | contacto | redes -->
+    <div class="container footer__top">
+
+      <!-- Logo -->
+      <a href="#inicio" class="footer__logo-link" aria-label="Ambital Inmobiliaria">
+        <img src="assets/images/logos/logo-footer.png" alt="Ambital Inmobiliaria" class="footer__logo-img" />
+      </a>
+
+      <!-- Contacto (centro) -->
+      <div class="footer__contact-row">
+        <p class="footer__contact-title">Contacto</p>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          <a href="https://wa.me/51999999999" class="footer__contact-value">+51 999 999 999</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <a href="mailto:ambitalconsultores@gmail.com" class="footer__contact-value">ambitalconsultores@gmail.com</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span class="footer__contact-value">Cal. Jose Colmenares Nro. 248</span>
+        </div>
+      </div>
+
+      <!-- Redes (derecha) -->
+      <div class="footer__top-right">
+        <span class="footer__social-label">Síguenos en nuestras redes:</span>
+        <div class="footer__social">
+          <a href="#" class="footer__social-btn" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="#" class="footer__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /footer__top -->
+
+    <!-- Copyright -->
+    <div class="footer__rule">
+      <div class="container footer__bottom">
+        <p class="footer__copy">© 2025 Ambital Inmobiliaria. Todos los derechos reservados. · <a href="privacidad.html" class="footer__privacy-link">Política de privacidad</a></p>
+        <p class="footer__made">Hecho con dedicación en <strong>Lima, Perú</strong></p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ========== BOTONES SOCIALES FLOTANTES ========== -->
+  <div class="social-float" aria-label="Redes sociales">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/51999999999?text=Hola%2C%20me%20interesa%20conocer%20los%20proyectos%20de%20Ambital%20Inmobiliaria"
+       target="_blank" rel="noopener noreferrer"
+       class="social-float__btn social-float__btn--wa"
+       aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+  </div>
+
+  <!-- ========== LIGHTBOX CASOS ========== -->
+  <div class="lb-overlay" id="casosLightbox" role="dialog" aria-modal="true" aria-label="Detalle del proyecto">
+    <div class="lb-panel">
+      <button class="lb-close" id="lbClose" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <!-- Imagen izquierda -->
+      <div class="lb-img-col">
+        <img src="" alt="" class="lb-img" id="lbImg">
+        <span class="lb-badge caso-card__badge" id="lbBadge"></span>
+        <div class="lb-metrics" id="lbMetrics"></div>
+      </div>
+      <!-- Info derecha -->
+      <div class="lb-info">
+        <p class="lb-location" id="lbLocation"></p>
+        <h2 class="lb-title" id="lbTitle"></h2>
+        <blockquote class="lb-quote" id="lbQuote"></blockquote>
+        <div class="lb-person" id="lbPerson"></div>
+        <a href="#contacto" class="btn btn--primary lb-cta" id="lbCta">Me interesa este proyecto →</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    /* ── Carrusel aliados — scroll continuo + flechas ── */
+    (function () {
+      const track   = document.getElementById('aliadosTrack');
+      const wrap    = track && track.closest('.aliados__track-wrap');
+      const prevBtn = document.querySelector('.aliados__arrow--prev');
+      const nextBtn = document.querySelector('.aliados__arrow--next');
+      if (!track || !wrap || !prevBtn || !nextBtn) return;
+
+      let offset    = 0;          // px desplazados desde 0
+      let speed     = 0.35;       // px por frame (auto)
+      let nudge     = 0;          // px extra por flecha
+      let paused    = false;
+
+      function halfWidth() { return track.scrollWidth / 2; }
+
+      function tick() {
+        if (!paused) offset += speed;
+
+        // Aplicar impulso de flecha con decaimiento
+        if (nudge !== 0) {
+          offset += nudge * 0.12;
+          nudge  *= 0.88;
+          if (Math.abs(nudge) < 0.3) nudge = 0;
+        }
+
+        // Loop infinito: cuando llega a la mitad, regresa al inicio
+        const half = halfWidth();
+        if (offset >= half) offset -= half;
+        if (offset < 0)     offset += half;
+
+        track.style.transform = `translateX(${-offset}px)`;
+        requestAnimationFrame(tick);
+      }
+
+      // Pausa al hover
+      wrap.addEventListener('mouseenter', () => { paused = true;  });
+      wrap.addEventListener('mouseleave', () => { paused = false; });
+
+      // Flechas — aplican impulso suave
+      prevBtn.addEventListener('click', () => { nudge -= 220; });
+      nextBtn.addEventListener('click', () => { nudge += 220; });
+
+      requestAnimationFrame(tick);
+    })();
+
+    /* ── Carrusel nosotros checks ── */
+    (function () {
+      const cards   = document.querySelectorAll('.nos-card');
+      const dots    = document.querySelectorAll('.nos-dot');
+      const prev    = document.getElementById('nosPrev');
+      const next    = document.getElementById('nosNext');
+      if (!cards.length) return;
+
+      let current = 0;
+      let timer;
+
+      function goTo(idx) {
+        cards[current].classList.remove('nos-card--active', 'nos-card--exit');
+        cards[current].classList.add('nos-card--exit');
+        setTimeout(() => cards[current].classList.remove('nos-card--exit'), 500);
+
+        current = (idx + cards.length) % cards.length;
+        cards[current].classList.add('nos-card--active');
+
+        dots.forEach((d, i) => d.classList.toggle('nos-dot--active', i === current));
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 3500);
+      }
+
+      if (prev) prev.addEventListener('click', () => { goTo(current - 1); startTimer(); });
+      if (next) next.addEventListener('click', () => { goTo(current + 1); startTimer(); });
+      dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.i); startTimer(); }));
+
+      startTimer();
+    })();
+  </script>
+</body>
+</html>

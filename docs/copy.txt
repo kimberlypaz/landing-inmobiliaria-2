@@ -1,0 +1,204 @@
+=========================================================
+COPY COMPLETO – VIVE BIEN INMOBILIARIA
+Versión reutilizable para múltiples proyectos
+=========================================================
+
+
+------- HERO -------
+
+TAG:          Nuevos proyectos 2025
+TÍTULO:       Tu nuevo hogar te está esperando
+SUBTÍTULO:    Departamentos modernos en las mejores ubicaciones de Lima.
+              Financiamiento flexible, entrega garantizada.
+CTA 1:        Ver proyectos
+CTA 2:        Hablar con un asesor
+
+ESTADÍSTICAS:
+  +500        familias felices
+  12          proyectos entregados
+  15 años     de experiencia
+
+
+------- PROYECTOS -------
+
+SECCIÓN TAG:    Disponibles ahora
+TÍTULO:         Proyectos destacados
+SUBTÍTULO:      Seleccionamos cada proyecto por su ubicación, calidad y potencial de valorización.
+
+CARD 1 – MIRAFLORES
+  Distrito:     Miraflores, Lima
+  Badge:        Nuevo
+  Nombre:       Residencial Viva Miraflores
+  Descripción:  Departamentos de 1, 2 y 3 dormitorios con acabados de lujo,
+                áreas comunes exclusivas y vista al mar.
+  Features:     Desde 55 m²  |  Rooftop y gym  |  Entrega 2025
+  Precio:       Desde S/ 350,000
+  CTA:          Me interesa
+
+CARD 2 – SAN ISIDRO
+  Distrito:     San Isidro, Lima
+  Badge:        Preventa
+  Nombre:       The Park San Isidro
+  Descripción:  Vive en el corazón financiero de Lima. Departamentos premium con
+                tecnología smart home y seguridad 24/7.
+  Features:     Desde 70 m²  |  Coworking y pool  |  Entrega 2026
+  Precio:       Desde S/ 520,000
+  CTA:          Me interesa
+
+CARD 3 – SURCO
+  Distrito:     Santiago de Surco, Lima
+  Badge:        Últimas unidades
+  Nombre:       Altavista Surco
+  Descripción:  El equilibrio perfecto entre naturaleza y ciudad. Amplios
+                departamentos con parques privados y áreas verdes.
+  Features:     Desde 80 m²  |  Parque privado  |  Entrega inmediata
+  Precio:       Desde S/ 420,000
+  CTA:          Me interesa
+
+CTA FINAL:      Ver todos los proyectos
+
+
+------- BENEFICIOS -------
+
+SECCIÓN TAG:    ¿Por qué elegirnos?
+TÍTULO:         Comprando con Vive Bien
+SUBTÍTULO:      Más que un departamento, te ofrecemos una experiencia de compra sin estrés.
+
+B1 – Financiamiento fácil
+  Trabajamos con todos los bancos y cajas. Te ayudamos a conseguir la mejor
+  tasa hipotecaria del mercado.
+
+B2 – Asesoría legal gratuita
+  Nuestro equipo jurídico revisa cada contrato para que firmes con total
+  tranquilidad y seguridad.
+
+B3 – Alta valorización
+  Proyectos en zonas de alto crecimiento. Tu departamento vale más cada año.
+  Es tu mejor inversión.
+
+B4 – Entrega garantizada
+  Cumplimos plazos. Entregamos en las fechas prometidas con los acabados
+  que elegiste desde el inicio.
+
+B5 – Garantía post-venta
+  Te acompañamos después de la entrega. Soporte técnico y atención garantizada
+  durante los primeros años.
+
+B6 – Atención personalizada
+  Un asesor dedicado te guía desde la primera visita hasta el día que recibes
+  las llaves de tu nuevo hogar.
+
+
+------- BANNER CTA (BONO VERDE) -------
+
+TÍTULO:         ¿Buscas departamento con Bono Verde o Mi Vivienda?
+SUBTÍTULO:      Te ayudamos a acceder al subsidio del Estado y reducir
+                significativamente el precio de tu departamento.
+CTA:            Quiero aprovechar el bono
+
+
+------- UBICACIÓN -------
+
+SECCIÓN TAG:    Estratégicamente ubicados
+TÍTULO:         En los mejores distritos de Lima
+DESCRIPCIÓN:    Cada uno de nuestros proyectos está elegido por su conectividad,
+                seguridad y potencial de crecimiento. Vivir bien significa estar
+                cerca de todo lo que importa.
+
+DISTRITO 1:     Miraflores
+  Detalle:      A 5 min del Malecón. Zona residencial premium con alta demanda.
+
+DISTRITO 2:     San Isidro
+  Detalle:      Centro financiero y cultural. Ideal para profesionales y ejecutivos.
+
+DISTRITO 3:     Santiago de Surco
+  Detalle:      El distrito familiar por excelencia. Parques, colegios y
+                centros comerciales.
+
+CTA:            Asesorarme sobre ubicaciones
+
+
+------- TESTIMONIOS -------
+
+SECCIÓN TAG:    Lo que dicen nuestros clientes
+TÍTULO:         Familias que ya viven mejor
+
+T1 – María García / Propietaria en Miraflores
+  "El proceso fue más fácil de lo que esperaba. Me ayudaron con el banco, el
+  contrato y hasta el diseño del departamento. Ya llevo un año viviendo aquí
+  y no lo cambiaría por nada."
+
+T2 – Carlos Mendoza / Inversor en San Isidro
+  "Compré como inversión y en dos años ya subió un 18% su valor. El equipo de
+  Vive Bien me asesoró perfectamente. Ahora quiero comprar un segundo departamento."
+
+T3 – Lucía Torres / Propietaria en Surco
+  "Cumplieron con todo lo prometido. Entregaron a tiempo, con los acabados que
+  elegimos y el asesor siempre disponible. Por fin mi familia tiene el hogar
+  que merecía."
+
+
+------- CONTACTO -------
+
+SECCIÓN TAG:    Empieza hoy
+TÍTULO:         Habla con un asesor sin compromiso
+DESCRIPCIÓN:    Cuéntanos qué buscas y te presentamos las mejores opciones según
+                tu presupuesto y necesidades. La primera consulta es completamente gratuita.
+
+DATOS DE CONTACTO:
+  Teléfono:     +51 999 999 999
+  Email:        ventas@vivebien.pe
+  Dirección:    Av. Larco 1301, Miraflores, Lima
+  Horario:      Lun–Sab: 9:00 am – 6:00 pm
+
+CTA WHATSAPP:   Escribir por WhatsApp
+
+FORMULARIO:
+  Título:       Solicita información gratuita
+  Campo 1:      Nombre completo *
+  Campo 2:      Teléfono / WhatsApp *
+  Campo 3:      Correo electrónico
+  Campo 4:      Proyecto de interés (desplegable)
+  Campo 5:      ¿Qué estás buscando?
+  Botón:        Quiero que me contacten
+  Privacidad:   Al enviar aceptas nuestra política de privacidad. No enviamos spam.
+
+MENSAJE ÉXITO:
+  Título:       ¡Listo! Recibimos tu mensaje
+  Texto:        Un asesor se pondrá en contacto contigo en menos de 2 horas hábiles.
+  CTA:          También puedes escribirnos por WhatsApp
+
+
+------- FOOTER -------
+
+TAGLINE:        Ayudamos a familias peruanas a encontrar el departamento de sus sueños
+                con seguridad, transparencia y asesoría real.
+
+COLUMNA 1 – Proyectos:
+  Residencial Viva Miraflores
+  The Park San Isidro
+  Altavista Surco
+
+COLUMNA 2 – Empresa:
+  ¿Por qué nosotros?
+  Testimonios
+  Contacto
+
+COLUMNA 3 – Síguenos:
+  Instagram | Facebook | LinkedIn
+
+COPYRIGHT:      © 2025 Vive Bien Inmobiliaria. Todos los derechos reservados.
+
+
+=========================================================
+NOTAS PARA PERSONALIZAR
+=========================================================
+
+Para adaptar este copy a otro proyecto inmobiliario:
+1. Reemplaza "Vive Bien" por el nombre de tu inmobiliaria o proyecto.
+2. Actualiza los nombres de proyectos, distritos y precios.
+3. Sustituye las estadísticas del hero por las reales.
+4. Reemplaza los testimonios con clientes reales.
+5. Actualiza teléfono, email y dirección.
+6. Cambia el link de WhatsApp: wa.me/51XXXXXXXXX
+=========================================================
