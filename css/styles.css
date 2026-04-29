@@ -396,25 +396,20 @@ h4 { font-size: 1rem;           font-weight: 400; letter-spacing: -0.01em; }
   align-items: center;
   flex-shrink: 0;
   text-decoration: none;
-  height: 34px;
-  overflow: hidden;
   margin-right: auto;
-  margin-left: 9rem;
+  margin-left: 8rem;
 }
 
-.header--scrolled .nav__logo { height: 42px; }
-
 .nav__logo-img {
-  height: 170px;
+  height: 72px;
   width: auto;
-  max-width: none;
   object-fit: contain;
   filter: drop-shadow(0 1px 4px rgba(0,0,0,0.3));
   transition: height 0.3s ease;
   flex-shrink: 0;
 }
 
-.header--scrolled .nav__logo-img { height: 205px; }
+.header--scrolled .nav__logo-img { height: 66px; }
 
 .nav__logo-text {
   display: flex;
