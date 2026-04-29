@@ -556,7 +556,13 @@
           </div>
 
           <!-- Formulario -->
-          <form class="contacto__form" id="contactForm" novalidate>
+          <form class="contacto__form" id="contactForm" method="POST" action="https://formspree.io/f/xrejzpjp" novalidate>
+
+            <!-- Anti-spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Reply-to dinámico (se llena por JS con el email ingresado) -->
+            <input type="hidden" name="_replyto" id="replytoField" />
+
             <div class="contacto__fields">
               <input type="text"  id="nombre"   name="nombre"   class="contacto__input" placeholder="Tu nombre" required />
               <input type="tel"   id="telefono" name="telefono" class="contacto__input" placeholder="WhatsApp" required />
@@ -573,13 +579,13 @@
               </div>
               <textarea id="como_ayudar" name="como_ayudar" class="contacto__input contacto__textarea" placeholder="¿Cómo piensas que te podemos ayudar?" rows="3"></textarea>
             </div>
-            <button type="submit" class="contacto__submit">
+            <button type="submit" class="contacto__submit" id="contactSubmit">
               Agenda tu reunión
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
             <p class="contacto__privacy">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              Tus datos están seguros · <a href="#">Privacidad</a>
+              Tus datos están seguros · <a href="privacidad.html">Privacidad</a>
             </p>
           </form>
 

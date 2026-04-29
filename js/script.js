@@ -520,13 +520,14 @@
   (function initForm() {
     var form    = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
+    var submitBtn = document.getElementById('contactSubmit');
 
     if (!form) return;
 
     // Select: gris cuando vacío, oscuro cuando seleccionado
-    var selectProyecto = form.querySelector('#proyecto');
-    if (selectProyecto) {
-      selectProyecto.addEventListener('change', function () {
+    var selectTipo = form.querySelector('#tipo_cliente');
+    if (selectTipo) {
+      selectTipo.addEventListener('change', function () {
         this.classList.toggle('is-selected', this.value !== '');
       });
     }
@@ -541,6 +542,7 @@
 
       var nombre   = form.querySelector('#nombre');
       var telefono = form.querySelector('#telefono');
+      var email    = form.querySelector('#email');
       var hasError = false;
 
       if (!nombre.value.trim()) {
@@ -557,20 +559,38 @@
 
       if (hasError) return;
 
-      // ── Aquí conectar con API real ──
-      // fetch('/api/contacto', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     nombre:   nombre.value.trim(),
-      //     telefono: telefono.value.trim(),
-      //     email:    form.querySelector('#email').value.trim(),
-      //     proyecto: form.querySelector('#proyecto').value,
-      //     mensaje:  form.querySelector('#mensaje').value.trim(),
-      //   })
-      // }).then(showSuccess).catch(console.error);
+      // Rellenar _replyto con el email del usuario
+      var replyto = document.getElementById('replytoField');
+      if (replyto && email) replyto.value = email.value.trim();
 
-      showSuccess();
+      // Deshabilitar botón mientras envía
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) {
+        if (res.ok) {
+          showSuccess();
+          form.reset();
+          if (selectTipo) selectTipo.classList.remove('is-selected');
+        } else {
+          return res.json().then(function (data) {
+            throw new Error(data.error || 'Error al enviar');
+          });
+        }
+      })
+      .catch(function (err) {
+        alert('Hubo un problema al enviar el formulario. Por favor intenta nuevamente o escríbenos directamente a ambitalconsultores@gmail.com');
+        console.error(err);
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Agenda tu reunión <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      });
     });
 
     function showSuccess() {
