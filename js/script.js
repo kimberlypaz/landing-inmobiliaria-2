@@ -659,6 +659,11 @@
       var btn   = card.querySelector('.reel-card__play');
       if (!video || !btn) return;
 
+      // Mostrar el primer frame como portada en lugar de pantalla gris
+      function showFirstFrame() { video.currentTime = 0.001; }
+      if (video.readyState >= 1) { showFirstFrame(); }
+      else { video.addEventListener('loadedmetadata', showFirstFrame); }
+
       function activateCard() {
         var isMobile = window.innerWidth <= 768;
 

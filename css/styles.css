@@ -3133,9 +3133,18 @@ h4 { font-size: 1rem;           font-weight: 400; letter-spacing: -0.01em; }
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.aliados__card:hover {
-  transform: scale(1.04);
-  opacity: 0.88;
+@media (hover: hover) {
+  .aliados__card:hover {
+    transform: scale(1.04);
+    opacity: 0.88;
+  }
+}
+
+@media (hover: none) {
+  .aliados__card:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
 }
 
 /* ── Logo dentro de la tarjeta ── */
