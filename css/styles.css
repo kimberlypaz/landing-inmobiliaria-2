@@ -2816,11 +2816,11 @@ h4 { font-size: 1rem;           font-weight: 400; letter-spacing: -0.01em; }
   height: 38px;
 }
 
-/* Mobile: agrandar botón play del secundario para cumplir mínimo táctil (44px) */
+/* Mobile: ocultar botón play (autoplay por IntersectionObserver) */
 @media (max-width: 768px) {
+  .reel-card__play,
   .reel-card__play--sm {
-    width: 48px;
-    height: 48px;
+    display: none;
   }
 }
 

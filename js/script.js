@@ -633,18 +633,50 @@
     var btnNext = document.getElementById('reelsNext');
     var dots = document.querySelectorAll('.reels__mobile-dot');
 
+    function playReelCard(card) {
+      var v = card && card.querySelector('video');
+      if (!v) return;
+      v.muted = true;
+      v.play().catch(function() {});
+      card.classList.add('is-playing');
+    }
+
+    function pauseReelCard(card) {
+      var v = card && card.querySelector('video');
+      if (!v) return;
+      v.pause();
+      card.classList.remove('is-playing');
+    }
+
     function goReelSlide(idx) {
+      if (window.innerWidth <= 768) pauseReelCard(cards[reelIndex]);
       reelIndex = Math.max(0, Math.min(idx, cards.length - 1));
-      cards.forEach(function(c, i) {
+      cards.forEach(function(c) {
         c.style.transform = 'translateX(' + (-reelIndex * 100) + '%)';
       });
       dots.forEach(function(d, i) {
         d.classList.toggle('reels__mobile-dot--active', i === reelIndex);
       });
+      if (window.innerWidth <= 768) playReelCard(cards[reelIndex]);
     }
 
     if (btnPrev) btnPrev.addEventListener('click', function() { goReelSlide(reelIndex - 1); });
     if (btnNext) btnNext.addEventListener('click', function() { goReelSlide(reelIndex + 1); });
+
+    // Autoplay mobile: arranca/pausa según visibilidad de la sección
+    if ('IntersectionObserver' in window) {
+      var reelSection = document.querySelector('.reels-sec');
+      if (reelSection) {
+        new IntersectionObserver(function(entries) {
+          if (window.innerWidth > 768) return;
+          if (entries[0].isIntersecting) {
+            playReelCard(cards[reelIndex]);
+          } else {
+            cards.forEach(function(c) { pauseReelCard(c); });
+          }
+        }, { threshold: 0.4 }).observe(reelSection);
+      }
+    }
 
     function collapseAll() {
       cards.forEach(function (c) {
